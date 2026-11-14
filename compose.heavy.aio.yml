@@ -66,9 +66,9 @@ services:
       - POSTGRES_USER=panel
       - POSTGRES_PASSWORD=panel
       - POSTGRES_DB=panel
-      - PGDATA=/data
+      - PGDATA=/var/lib/postgresql/data/pgdata
     volumes:
-      - ./postgres:/data
+      - /mnt/hd/calagopus-panel/postgres:/var/lib/postgresql
 
   cache:
     image: calagopus/valkey:latest
