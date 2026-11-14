@@ -60,8 +60,8 @@ services:
 
   db: 
    image: calagopus/pgautoupgrade:18-alpine
-   user: "999:999"
     restart: unless-stopped
+    user: "999:999"
     environment:
       - TZ=Europe/Berlin
       - POSTGRES_USER=panel
