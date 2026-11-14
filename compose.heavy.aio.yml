@@ -58,8 +58,9 @@ services:
       - db
       - cache
 
-  db:
-    image: calagopus/pgautoupgrade:18-alpine
+  db: 
+   image: calagopus/pgautoupgrade:18-alpine
+   user: "999:999"
     restart: unless-stopped
     environment:
       - TZ=Europe/Berlin
